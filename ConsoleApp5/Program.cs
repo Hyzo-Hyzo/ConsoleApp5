@@ -31,33 +31,32 @@
             int num2 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter '1' = +; '2' = -; '3' = *; '4' = /; ");
-            int s=int.Parse(Console.ReadLine());
+            int s = int.Parse(Console.ReadLine());
+            int res = null;
             switch (s)
             {
                 case 1:
                     myDelegate = Add;
-                    int res = myDelegate(num1, num2);
-                    Console.WriteLine($" + res  {res}");
+                    
                     break;
                 case 2:
                     myDelegate = Substract;
-                    res = myDelegate(num1, num2);
-                    Console.WriteLine($" - res  {res}");
+                    
                     break;
                 case 3:
                     myDelegate = Multiplication;
-                    res = myDelegate(num1, num2);
-                    Console.WriteLine($" * res {res}");
+                    
                     break;
                 case 4:
                     myDelegate = Division;
-                    res = myDelegate(num1, num2);
-                    Console.WriteLine($" / res  {res}");
+                   
                     break;
                 default: Console.WriteLine("Error!");
                     break;
             }
-           
+            res = myDelegate(num1, num2);
+            Console.WriteLine($" - res  {res}");
+
 
         }
     }
