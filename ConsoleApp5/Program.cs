@@ -25,14 +25,14 @@
 
         static void Main(string[] args)
         {
-            MyDelegate myDelegate;
+            MyDelegate myDelegate=null;
             Console.WriteLine("Enter 2 number : ");
             int num1=int.Parse(Console.ReadLine());
             int num2 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter '1' = +; '2' = -; '3' = *; '4' = /; ");
             int s = int.Parse(Console.ReadLine());
-            int res = null;
+            
             switch (s)
             {
                 case 1:
@@ -54,8 +54,9 @@
                 default: Console.WriteLine("Error!");
                     break;
             }
-            res = myDelegate(num1, num2);
-            Console.WriteLine($" - res  {res}");
+            
+            int res = myDelegate(num1, num2);
+            Console.WriteLine($"  res  {res}");
 
 
         }
